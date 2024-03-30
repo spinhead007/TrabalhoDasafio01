@@ -1,0 +1,25 @@
+package Trabalho01;
+import java.util.Scanner;
+
+
+public class PositivoNegativo {
+	public static void main(String[] args) {
+		
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.print("Digite um numero: ");
+		int numero = imput.nextInt();
+		
+		if (numero > 0) {
+			System.out.println(numero+ " é Positivo");
+		}
+		else if (numero < 0) {
+			System.out.println(numero+ " é Negativo");
+		}
+		else if (numero == 0) {
+			System.out.println(numero+ " é zero");
+		}
+		
+		imput.close();
+		}
+	}
