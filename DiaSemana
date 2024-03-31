@@ -1,0 +1,32 @@
+package Trabalho01;
+
+import java.util.Scanner;
+
+public class DiaDaSemana {
+		public static void main(String[] args) {
+		
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.print("O dia da Semana de 1 a 7 sendo Segunda 1 e  Domingo é 7: ");
+		int numero = imput.nextInt();
+		
+		String dia = "";
+	
+		switch (numero) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			dia = "Dia Util";
+			break;
+		case 6:
+		case 7:
+			dia = "Final de semana";
+			break; 
+				
+		}	
+		System.out.print("O dia é "+ dia);
+		imput.close();
+			
+}}
