@@ -1,0 +1,49 @@
+package Trabalho;
+
+import java.util.Scanner;
+
+public class Desafio03Calculadora {
+	
+	public static void main(String[] args) {
+		
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.println("Digite o numero: ");
+		double n1 = imput.nextDouble();
+		
+		System.out.println("Digite outro numero: ");
+		double n2 = imput.nextDouble();
+		
+		System.out.println("Digite a operação: ");
+		String operacao = imput.next();
+		
+		double resultado = 0;
+		
+		switch (operacao) {
+		
+		case "+":
+			resultado = n1 + n2;
+			System.out.println("O resultado é: " + resultado);
+			break;
+			
+		case "-":
+			resultado = n1 - n2;
+			System.out.println("O resultado é: " + resultado);
+			break;
+			
+		case "*":
+			resultado = n1 * n2;
+			System.out.println("O resultado é: " + resultado);
+			break;
+			
+		case "/":
+			resultado = n1 / n2;
+			System.out.println("O resultado é: " + resultado);
+			break;
+			
+		default:
+			System.out.println("Inválido");
+		}
+		imput.close();
+	}
+}
