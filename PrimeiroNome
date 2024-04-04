@@ -1,0 +1,17 @@
+package Trabalho01;
+import java.util.Scanner;
+
+public class NomeString {
+	public static void main(String[] args) {
+		
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.println("Digite seu nome completo: ");
+		String nome = imput.next();
+		
+		String[] primeiroNome = nome.split(" ");
+		System.out.println("\nSeu primeiro nome é: " + primeiroNome[0]);
+		
+		imput.close();
+	}		
+}
