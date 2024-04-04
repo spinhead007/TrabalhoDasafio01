@@ -1,0 +1,22 @@
+package Trabalho01;
+import java.util.Scanner;
+
+public class MediaFinal {
+	public static void main(String[] args) {
+		
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.println("Primeira nota: ");
+		double nota01 = leitor.nextDouble();
+		
+		System.out.println("Segunda nota: ");
+		double nota02 = imput.nextDouble();
+		
+		double media = (nota01 + nota02) / 2;
+		String mediaFinal = String.format("A média é %.2f", media);
+		
+		System.out.println(mediaFinal);
+		
+		imput.close();
+	}
+}
