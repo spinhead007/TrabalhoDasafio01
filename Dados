@@ -1,0 +1,14 @@
+package aula02;
+
+public class Dados {
+	public static void main (String[] args) {
+		String nome = "Joao";
+		int cpf = 817;
+		int cep = 158512;
+		String cidade = "Curitiba";
+		String estado = "Parana";
+		
+		System.out.println(nome + ", " + cpf + " , " + cep+ ", " + cidade +", " + estado);
+		
+		}
+}
