@@ -1,0 +1,36 @@
+package Trabalho01;
+import java.util.Scanner;
+
+public class MaiorString {
+	public static void main(String[] args) {
+			
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.println("Digite a primeira String: ");
+		String texto01 = imput.next();
+		
+		System.out.println("Digite a segunda String: ");
+		String texto02 = imput.next();
+		
+		System.out.println("Digite a terceira String: ");
+		String texto03 = imput.next();
+		
+		int tamanhoTexto01 = texto01.trim().length();
+		int tamanhoTexto02 = texto02.trim().length();
+		int tamanhoTexto03 = texto03.trim().length();
+		
+		if (tamanhoTexto01 > tamanhoTexto02 & tamanhoTexto01 > tamanhoTexto03) {
+			System.out.println("O texto " + texto01 + " Tem " + tamanhoTexto01 + " caracteres");
+		}
+		
+		if (tamanhoTexto02 > tamanhoTexto01 & tamanhoTexto02 > tamanhoTexto03) {
+			System.out.println("O texto " + texto02 + " Tem " + tamanhoTexto02 + " caracteres");
+		}
+		
+		if (tamanhoTexto03 > tamanhoTexto01 & tamanhoTexto03 > tamanhoTexto02) {
+			System.out.println("O texto " + texto03 + " Tem " + tamanhoTexto03 + " caracteres");
+		}
+		
+		imput.close();
+	}
+}
