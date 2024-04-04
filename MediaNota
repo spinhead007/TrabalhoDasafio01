@@ -1,0 +1,27 @@
+package aula03;
+
+import java.util.Scanner;
+
+public class TrabalhoDesafio2 {
+	public static void main (String[] args) {
+		
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.print("Digite sua nota: ");
+		int nota = imput.nextInt();
+		
+		
+		if(nota >= 70) {
+			System.out.println("Aprovado");
+		}
+		if(nota >= 90) {
+			System.out.println("Parabens");
+		}	
+		else {
+			System.out.println("Reprovado");
+		
+		}
+		imput.close();	
+		
+	}
+}
