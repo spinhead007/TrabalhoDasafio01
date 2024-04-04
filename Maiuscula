@@ -1,0 +1,17 @@
+package Trabalho01;
+import java.util.Scanner;
+
+public class Maiuscula {
+	public static void main(String[] args) {
+		
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.println("Digite seu nome completo: ");
+		String nome = imput.next();
+		
+		String[] maiusculoNome = nome.split(" ");
+		System.out.println("\nSeu primeiro nome é: " + maisculoNome[0].toUpperCase());
+		
+		imput.close();		
+	}
+}
