@@ -1,0 +1,25 @@
+package Trabalho01;
+import java.util.Scanner;
+
+public class ignoreMaiuscula {
+	public static void main(String[] args) {
+	
+		Scanner imput = new Scanner(System.in);
+		
+		System.out.println("Digite o nome da sua Cidade: ");
+		String cidade = imput.next().toUpperCase();
+				
+		switch (cidade){
+		
+		case "CURITIBA":
+			System.out.println("A cidade é Curitiba!!");
+			break;
+		
+		default:
+			System.out.println("A cidade não é Curitiba");
+			break;
+		}
+		
+		imput.close();		
+	}
+}
