@@ -1,0 +1,27 @@
+package Aula10;
+
+public class Cachorro {
+	String nome;
+	String raca;
+	int idade;
+	
+public Cachorro(String nome, String raca, int idade) {
+	this.nome = nome;
+	this.raca = raca;
+	this.idade = idade;
+}
+
+public void latir() {
+	System.out.println("O cachorro " + nome + " da Raça "+ raca + " está latindo!");
+
+}	
+public static void main(String[] args) {
+	Cachorro cachorro1 = new Cachorro("Rex", "Labrador", 3);
+	Cachorro cachorro2 = new Cachorro("Bela", "Poodle", 5);
+	
+	
+		System.out.println("O cachorro " + cachorro2.nome + " tem " + cachorro2.idade + " Anos");
+
+	
+	}
+}
