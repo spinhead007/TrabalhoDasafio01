@@ -1,0 +1,98 @@
+package Aula11;
+import java.util.Scanner;
+
+public class Radio {
+	private boolean ligado;
+	private int volume;
+	
+	public Radio() {
+		this.ligado = false;
+		this.volume = 50;
+		
+	}
+	
+	public void ligar() {
+		this.ligado = true;
+		System.out.println("O Radio está ligado");
+	}
+	
+	public void desligar() {
+		this.ligado = false;
+		System.out.println("O Radio está desligado");
+}
+	
+	public void aumentarVolume() {
+		if(ligado) {
+			if(volume < 100) {
+				volume += 10;
+				if(volume > 100) {
+					volume = 100; // Limite maximo do volume
+				}
+				System.out.println("Volume aumentado" + volume + "%");
+			}else {
+				System.out.println("O Volume Está no Máximo");
+				
+			}
+		}else { 
+			System.out.println("Ligue o Radio");
+		}
+	}
+	
+	public void diminuirVolume() {
+		if(ligado) {
+			if(volume > 0) {
+				volume -= 10;
+				if(volume < 0) {
+					volume = 0; // Limite mínimo do volume
+				}
+				System.out.println("Volume diminuido" + volume + " % ");
+			}else {
+				System.out.println("O Volume Está no Minimo");
+				
+			}
+		}else { 
+			System.out.println("Ligue o Radio");
+		}
+	}
+	
+	public static void main (String[] args) {
+		Radio radio = new Radio();
+		Scanner scanner = new Scanner(System.in);
+		
+	for(;;) {
+		System.out.println("\nMENU");
+		System.out.println("\n1- Ligar radio");
+		System.out.println("\n2- Desligar radio");
+		System.out.println("\n3- Aumentar Volume");
+		System.out.println("\n4- Diminuir Volume");
+		System.out.println("\n5- Sair do Programa");
+		System.out.println("Escolha uma opção: ");
+		int opcao = scanner.nextInt();
+		
+		switch(opcao) {
+		case 1:
+			radio.ligar();
+			break;
+		case 2:
+			radio.desligar();
+			break;
+		case 3:
+			radio.aumentarVolume();
+			break;
+		case 4:
+			radio.diminuirVolume();
+			break;	
+		case 5:
+			System.out.println("Encerrando...");
+			scanner.close();
+			System.exit(0);
+			break;
+			default:
+				System.out.println("opção invalida");
+				break;
+			
+		}
+		
+	}
+	}
+	}
