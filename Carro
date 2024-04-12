@@ -1,0 +1,103 @@
+package Aula11;
+import java.util.Scanner;
+
+public class Carro {
+	//Atributos
+	String marca;
+	String modelo;
+	int ano;
+	double preco;
+	boolean ligado;
+	
+	
+	//Construtor
+	public Carro(String marca, String modelo, int ano, double preco ) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.ano = ano;
+		this.preco = preco;
+		this.ligado = false;
+	}
+	
+	//Função ligar carro
+	public void ligar() {
+		if(!ligado) {
+			System.out.println("\n ********************** \n");
+			System.out.println(" Carro ligado ");
+			System.out.println("\n ********************** \n");
+			ligado = true;
+		}else {
+			System.out.println("\n ********************** \n");
+			System.out.println(" O carro já está lidado");
+			System.out.println("\n ********************** \n");
+	}
+	}
+	//Função Desligar carro
+	public void desligar() {
+		if(ligado) {
+			System.out.println("\n ********************** \n");
+			System.out.println(" Carro desligado ");
+			System.out.println("\n ********************** \n");
+			ligado = false;
+		}else {
+			System.out.println("\n ********************** \n");
+			System.out.println(" O carro já está deslidado");
+			System.out.println("\n ********************** \n");
+	}
+	}
+	//Função para verificar o estado do carro
+		public void verificarEstado() {
+			if(ligado) {
+				System.out.println("O Carro está ligado ");
+				
+			}else {
+				System.out.println(" O Carro está deslidado");
+		}
+		}
+		
+		//Função para Listar carro
+				public void listarCarro() {
+					System.out.println("Marca: " + marca + " Modelo: "+ modelo + " Ano: "+ ano + " Preço: " + preco );
+				}	
+					
+					
+		public static void main(String[] args) {
+			Carro carro = new Carro("Toyota", "Corolla", 1999, 50000);
+			Scanner scanner = new Scanner(System.in);
+			int opcao;
+			
+			do {
+				System.out.println("\nMENU");
+				System.out.println("\n1- Ligar Carro:");
+				System.out.println("\n2- Desligar Carro:");
+				System.out.println("\n3- Verificar o estado do carro:");
+				System.out.println("\n4- Listar os carros:");
+				System.out.println("Escolha uma opção: ");
+				opcao = scanner.nextInt();
+				
+				switch(opcao) {
+				case 1:
+					carro.ligar();
+				break;
+				
+				case 2:
+					carro.desligar();
+				break;
+				
+				case 3:
+					carro.verificarEstado();
+				break;
+				
+				case 4:
+					carro.listarCarro();
+				break;
+				default:
+					System.out.println("Opção Invalida");
+				break;
+				}
+			}
+			while(opcao != 0);
+			scanner.close();
+		
+				}
+	}
